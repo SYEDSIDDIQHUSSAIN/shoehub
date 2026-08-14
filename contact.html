@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact ShoeHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>ShoeHub 👟</h1>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            
+            <a href="products.html">Products</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+           
+            <a href="cart.html">🛒 Cart</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- CONTACT SECTION -->
+
+    <main class="contact-page">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            If you have any queries regarding the Shoe Hub, please feel free to reach out.
+            Enter your WhatsApp number below
+            and contact us directly.
+        </p><HR>
+
+
+        <!-- CUSTOMER NUMBER -->
+
+        <input
+            type="tel"
+            id="customerNumber"
+            placeholder="Enter your WhatsApp number"
+            maxlength="10">
+
+
+        <br><br>
+
+
+        <!-- CONTACT BUTTON -->
+
+        <button
+            onclick="contactUs()"
+            class="whatsapp-button">
+
+            💬 Contact Us on WhatsApp
+
+        </button>
+
+
+        <p id="error-message"></p>
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function contactUs() {
+
+            // Get customer's number
+
+            let customerNumber =
+                document.getElementById(
+                    "customerNumber"
+                ).value;
+
+
+            // Remove spaces
+
+            customerNumber =
+                customerNumber.replace(
+                    /\s/g,
+                    ""
+                );
+
+
+            // Check if number has 10 digits
+
+            if (
+                customerNumber.length !== 10 ||
+                isNaN(customerNumber)
+            ) {
+
+                document.getElementById(
+                    "error-message"
+                ).textContent =
+                    "Please enter a valid 10-digit mobile number.";
+
+                return;
+
+            }
+
+
+            // YOUR WHATSAPP NUMBER
+
+            let yourNumber =
+                "918123883335";
+
+
+            // Message sent to you
+
+            let message =
+                "Hello ShoeHub! " +
+                "I would like to contact you. " +
+                "My phone number is: " +
+                customerNumber;
+
+
+            // Create WhatsApp link
+
+            let whatsappLink =
+                "https://wa.me/" +
+                yourNumber +
+                "?text=" +
+                encodeURIComponent(message);
+
+
+            // Open WhatsApp
+
+            window.open(
+                whatsappLink,
+                "_blank"
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

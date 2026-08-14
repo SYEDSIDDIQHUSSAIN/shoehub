@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About ShoeHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+    
+        <h1>ShoeHub 👟</h1>
+
+        <nav>
+                        
+            <a href="index.html">Home</a>
+
+            <a href="products.html">Products</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="cart.html">🛒 Cart</a>
+
+        </nav>
+    
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="about-hero">
+
+        <div class="hero-text">
+
+            <h2>Step Into Your Best Style</h2>
+
+            <p>
+                Discover shoes designed for comfort,
+                style, and everyday adventures.
+            </p>
+
+            <a href="products.html"
+               class="hero-button">
+
+                Explore Our Shoes
+
+            </a>
+
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+            alt="Red running shoes">
+
+    </section>
+
+
+
+    <!-- ================= INTRODUCTION ================= -->
+
+    <section class="about-section">
+
+        <h2>Welcome to ShoeHub</h2>
+
+        <p>
+            ShoeHub is an online footwear store created
+            for people who want comfortable and stylish shoes.
+        </p>
+
+        <p>
+            We believe choosing shoes should be simple,
+            enjoyable, and convenient.
+        </p>
+
+        <p>
+            Our collection includes running shoes,
+            casual sneakers, formal shoes, and outdoor footwear.
+        </p>
+
+        <p>
+            We carefully organize our products so customers
+            can easily discover different styles and prices.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= BRAND IMAGE ================= -->
+
+    <section class="image-section">
+
+        <img
+            src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=1200&q=80"
+            alt="Casual shoes">
+
+        <div>
+
+            <h2>Made For Everyday Life</h2>
+
+            <p>
+                Your shoes go everywhere with you.
+                That's why we want our collection to offer
+                options for work, exercise, travel, weekends,
+                and everyday activities.
+            </p>
+
+            <p>
+                Whether you prefer a simple design or a
+                bold modern style, you can explore different
+                choices at ShoeHub.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= VIDEO ================= -->
+
+    <section class="video-section">
+
+        <h2>See ShoeHub In Action</h2>
+
+        <p>
+            Watch our short product video to see how our
+            shoes look from different angles.
+        </p>
+
+
+        <video
+            controls
+            poster="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80">
+
+            <source
+                src="videos/shoe-demo.mp4"
+                type="video/mp4">
+
+            Your browser does not support video.
+
+        </video>
+
+    </section>
+
+
+
+    <!-- ================= OUR STORY ================= -->
+
+    <section class="about-section">
+
+        <h2>Our Story</h2>
+
+        <p>
+            ShoeHub began with a simple idea:
+            make online shoe shopping easier.
+        </p>
+
+        <p>
+            Instead of spending hours visiting different
+            stores, customers can browse products online.
+        </p>
+
+        <p>
+            We wanted to create a website where customers
+            could see products, compare prices, and learn
+            about different styles.
+        </p>
+
+        <p>
+            As our website grows, we plan to add more
+            products and useful shopping features.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= THREE BENEFITS ================= -->
+
+    <section class="benefits">
+
+        <h2>Why Shop With Us?</h2>
+
+
+        <div class="benefit-container">
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">
+                    👟
+                </div>
+
+                <h3>Wide Selection</h3>
+
+                <p>
+                    Explore many different styles,
+                    colors, and types of footwear.
+                </p>
+
+            </div>
+
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">
+                    💰
+                </div>
+
+                <h3>Clear Pricing</h3>
+
+                <p>
+                    See product prices clearly before
+                    deciding what you want to buy.
+                </p>
+
+            </div>
+
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">
+                    📱
+                </div>
+
+                <h3>Easy Shopping</h3>
+
+                <p>
+                    Browse our store from your computer,
+                    tablet, or smartphone.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= AI RECOMMENDATION ================= -->
+
+    <section class="ai-section">
+
+        <div class="ai-content">
+
+            <h2>🤖 Smart Shoe Recommendations</h2>
+
+            <p>
+                Not sure which shoes are right for you?
+                Our future AI shopping assistant can help
+                you narrow down your choices.
+            </p>
+
+            <p>
+                For example, you could tell it whether you
+                want shoes for running, work, walking,
+                travel, or casual use.
+            </p>
+
+            <p>
+                It can then suggest products based on the
+                preferences you provide.
+            </p>
+
+            <button onclick="recommendShoes()">
+
+                Find My Shoes
+
+            </button>
+
+            <p id="ai-result"></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CUSTOMER STORIES ================= -->
+
+    <section class="stories">
+
+        <h2>What Our Customers Say</h2>
+
+        <p class="small-text">
+            Customer comments should be based on genuine
+            feedback from your actual customers.
+        </p>
+
+
+        <div class="story-container">
+
+
+            <div class="story">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The shoes were comfortable and the
+                    website was easy to use."
+                </p>
+
+                <strong>
+                    — Customer Review
+                </strong>
+
+            </div>
+
+
+
+            <div class="story">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "I liked being able to compare different
+                    styles before choosing."
+                </p>
+
+                <strong>
+                    — Customer Review
+                </strong>
+
+            </div>
+
+
+
+            <div class="story">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The product information made it easier
+                    for me to decide what I wanted."
+                </p>
+
+                <strong>
+                    — Customer Review
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FINAL CTA ================= -->
+
+    <section class="final-cta">
+
+        <h2>Ready To Find Your Next Pair?</h2>
+
+        <p>
+            Explore our collection and find a style
+            that fits your needs.
+        </p>
+
+        <a href="products.html">
+
+            Shop Now 👟
+
+        </a>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 ShoeHub. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
