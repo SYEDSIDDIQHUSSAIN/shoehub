@@ -12,397 +12,1933 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <style>
+
+        /* ==========================================
+           PRODUCT PAGE EXTRA STYLING
+        ========================================== */
+
+        .products {
+            max-width: 1400px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .product button {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .shop-now-button {
+            background-color: #25D366 !important;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .shop-now-button:hover {
+            background-color: #128C7E !important;
+        }
+
+        .product-category {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 4px 10px;
+            background-color: #eeeeee;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .products-header {
+            text-align: center;
+        }
+
+        .products-header h2 {
+            margin-bottom: 10px;
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- ================= HEADER ================= -->
+<!-- ==========================================
+     HEADER
+========================================== -->
 
-    <header>
+<header>
 
-        <h1>ShoeHub 👟</h1>
+    <h1>ShoeHub 👟</h1>
 
-        <nav>
-           
-            <a href="index.html">Home</a>
+    <nav>
 
-            <a href="products.html">Products</a>
+        <a href="index.html">Home</a>
 
-            <a href="about.html">About</a>
+        <a href="products.html">Products</a>
 
-            <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
 
-            <a href="cart.html">🛒 Cart</a>
+        <a href="contact.html">Contact</a>
 
-        </nav>
+        <a href="cart.html">🛒 Cart</a>
 
-    </header>
+    </nav>
 
+</header>
 
 
-    <!-- ================= TITLE ================= -->
 
-    <section class="products-header">
+<!-- ==========================================
+     PRODUCTS TITLE
+========================================== -->
 
-        <h2>Our Products</h2>
+<section class="products-header">
 
-        <p>
-            Find the perfect shoes for you.
-        </p>
+    <h2>Our Footwear Collection 👟</h2>
 
-    </section>
+    <p>
+        Discover shoes and footwear for every style and occasion.
+    </p>
 
+</section>
 
 
-    <!-- ================= PRODUCTS ================= -->
 
-    <main class="products">
+<!-- ==========================================
+     PRODUCTS
+========================================== -->
 
+<main class="products">
 
-        <!-- PRODUCT 1 -->
 
-        <div class="product">
+<!-- ================= PRODUCT 1 ================= -->
 
-            <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
-                alt="Red running shoes">
+<div class="product">
 
-            <h3>Classic Runner</h3>
+    <img
+        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        alt="Classic Runner">
 
-            <p>
-                Comfortable running shoes.
-            </p>
+    <h3>Classic Runner</h3>
 
-            <h4>₹1,999</h4>
+    <span class="product-category">Running Shoes</span>
 
+    <p>Comfortable running shoes for everyday training.</p>
 
-            <button
-                onclick="addToCart('Classic Runner', 1999)">
+    <h4>₹1,999</h4>
 
-                🛒 Add to Cart
+    <button
+        onclick="addToCart('Classic Runner',1999,'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80')">
 
-            </button>
+        🛒 Add to Cart
 
-        </div>
+    </button>
 
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Classic Runner',1999)">
 
+        🛍️ Shop Now
 
-        <!-- PRODUCT 2 -->
+    </button>
 
-        <div class="product">
+</div>
 
-            <img
-                src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
-                alt="White sneakers">
 
-            <h3>Street Sneakers</h3>
 
-            <p>
-                Stylish everyday sneakers.
-            </p>
+<!-- ================= PRODUCT 2 ================= -->
 
-            <h4>₹2,299</h4>
+<div class="product">
 
+    <img
+        src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+        alt="Street Sneakers">
 
-            <button
-                onclick="addToCart('Street Sneakers', 2299)">
+    <h3>Street Sneakers</h3>
 
-                🛒 Add to Cart
+    <span class="product-category">Sneakers</span>
 
-            </button>
+    <p>Stylish sneakers designed for everyday wear.</p>
 
-        </div>
+    <h4>₹2,299</h4>
 
+    <button
+        onclick="addToCart('Street Sneakers',2299,'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80')">
 
+        🛒 Add to Cart
 
-        <!-- PRODUCT 3 -->
+    </button>
 
-        <div class="product">
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Street Sneakers',2299)">
 
-            <img
-                src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=600&q=80"
-                alt="Sport shoes">
+        🛍️ Shop Now
 
-            <h3>Sport Max</h3>
+    </button>
 
-            <p>
-                Lightweight sports shoes.
-            </p>
+</div>
 
-            <h4>₹2,599</h4>
 
 
-            <button
-                onclick="addToCart('Sport Max', 2599)">
+<!-- ================= PRODUCT 3 ================= -->
 
-                🛒 Add to Cart
+<div class="product">
 
-            </button>
+    <img
+        src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=600&q=80"
+        alt="Sport Max">
 
-        </div>
+    <h3>Sport Max</h3>
 
+    <span class="product-category">Sports Shoes</span>
 
+    <p>Lightweight footwear for active lifestyles.</p>
 
-        <!-- PRODUCT 4 -->
+    <h4>₹2,599</h4>
 
-        <div class="product">
+    <button
+        onclick="addToCart('Sport Max',2599,'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=600&q=80')">
 
-            <img
-                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80"
-                alt="Black sneakers">
+        🛒 Add to Cart
 
-            <h3>Urban Black</h3>
+    </button>
 
-            <p>
-                Modern black sneakers.
-            </p>
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Sport Max',2599)">
 
-            <h4>₹2,499</h4>
+        🛍️ Shop Now
 
+    </button>
 
-            <button
-                onclick="addToCart('Urban Black', 2499)">
+</div>
 
-                🛒 Add to Cart
 
-            </button>
 
-        </div>
+<!-- ================= PRODUCT 4 ================= -->
 
+<div class="product">
 
+    <img
+        src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80"
+        alt="Urban Black">
 
-        <!-- PRODUCT 5 -->
+    <h3>Urban Black</h3>
 
-        <div class="product">
+    <span class="product-category">Sneakers</span>
 
-            <img
-                src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
-                alt="Casual shoes">
+    <p>Modern black sneakers with a clean design.</p>
 
-            <h3>Daily Comfort</h3>
+    <h4>₹2,499</h4>
 
-            <p>
-                Perfect for everyday walking.
-            </p>
+    <button
+        onclick="addToCart('Urban Black',2499,'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80')">
 
-            <h4>₹1,799</h4>
+        🛒 Add to Cart
 
+    </button>
 
-            <button
-                onclick="addToCart('Daily Comfort', 1799)">
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Urban Black',2499)">
 
-                🛒 Add to Cart
+        🛍️ Shop Now
 
-            </button>
+    </button>
 
-        </div>
+</div>
 
 
 
-        <!-- PRODUCT 6 -->
+<!-- ================= PRODUCT 5 ================= -->
 
-        <div class="product">
+<div class="product">
 
-            <img
-                src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80"
-                alt="White sneakers">
+    <img
+        src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+        alt="Daily Comfort">
 
-            <h3>Classic White</h3>
+    <h3>Daily Comfort</h3>
 
-            <p>
-                Clean and simple sneakers.
-            </p>
+    <span class="product-category">Casual Shoes</span>
 
-            <h4>₹2,099</h4>
+    <p>Soft and comfortable shoes for daily walking.</p>
 
+    <h4>₹1,799</h4>
 
-            <button
-                onclick="addToCart('Classic White', 2099)">
+    <button
+        onclick="addToCart('Daily Comfort',1799,'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80')">
 
-                🛒 Add to Cart
+        🛒 Add to Cart
 
-            </button>
+    </button>
 
-        </div>
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Daily Comfort',1799)">
 
+        🛍️ Shop Now
 
+    </button>
 
-        <!-- PRODUCT 7 -->
+</div>
 
-        <div class="product">
 
-            <img
-                src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=600&q=80"
-                alt="Fashion sneakers">
 
-            <h3>Fashion Pro</h3>
+<!-- ================= PRODUCT 6 ================= -->
 
-            <p>
-                Modern and stylish sneakers.
-            </p>
+<div class="product">
 
-            <h4>₹2,799</h4>
+    <img
+        src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80"
+        alt="Classic White">
 
+    <h3>Classic White</h3>
 
-            <button
-                onclick="addToCart('Fashion Pro', 2799)">
+    <span class="product-category">Sneakers</span>
 
-                🛒 Add to Cart
+    <p>Clean white sneakers for everyday outfits.</p>
 
-            </button>
+    <h4>₹2,099</h4>
 
-        </div>
+    <button
+        onclick="addToCart('Classic White',2099,'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80')">
 
+        🛒 Add to Cart
 
+    </button>
 
-        <!-- PRODUCT 8 -->
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Classic White',2099)">
 
-        <div class="product">
+        🛍️ Shop Now
 
-            <img
-                src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80"
-                alt="Running shoes">
+    </button>
 
-            <h3>Speed Runner</h3>
+</div>
 
-            <p>
-                Designed for running.
-            </p>
 
-            <h4>₹2,699</h4>
 
+<!-- ================= PRODUCT 7 ================= -->
 
-            <button
-                onclick="addToCart('Speed Runner', 2699)">
+<div class="product">
 
-                🛒 Add to Cart
+    <img
+        src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=600&q=80"
+        alt="Fashion Pro">
 
-            </button>
+    <h3>Fashion Pro</h3>
 
-        </div>
+    <span class="product-category">Fashion Sneakers</span>
 
+    <p>Modern sneakers with a fashionable appearance.</p>
 
+    <h4>₹2,799</h4>
 
-        <!-- PRODUCT 9 -->
+    <button
+        onclick="addToCart('Fashion Pro',2799,'https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=600&q=80')">
 
-        <div class="product">
+        🛒 Add to Cart
 
-            <img
-                src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80"
-                alt="Sports sneakers">
+    </button>
 
-            <h3>Flex Runner</h3>
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Fashion Pro',2799)">
 
-            <p>
-                Flexible and comfortable.
-            </p>
+        🛍️ Shop Now
 
-            <h4>₹2,399</h4>
+    </button>
 
+</div>
 
-            <button
-                onclick="addToCart('Flex Runner', 2399)">
 
-                🛒 Add to Cart
 
-            </button>
+<!-- ================= PRODUCT 8 ================= -->
 
-        </div>
+<div class="product">
 
+    <img
+        src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80"
+        alt="Speed Runner">
 
+    <h3>Speed Runner</h3>
 
-        <!-- PRODUCT 10 -->
+    <span class="product-category">Running Shoes</span>
 
-        <div class="product">
+    <p>Performance running shoes built for speed.</p>
 
-            <img
-                src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=600&q=80"
-                alt="Running shoes">
+    <h4>₹2,699</h4>
 
-            <h3>Air Runner</h3>
+    <button
+        onclick="addToCart('Speed Runner',2699,'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80')">
 
-            <p>
-                Soft and comfortable running shoes.
-            </p>
+        🛒 Add to Cart
 
-            <h4>₹2,999</h4>
+    </button>
 
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Speed Runner',2699)">
 
-            <button
-                onclick="addToCart('Air Runner', 2999)">
+        🛍️ Shop Now
 
-                🛒 Add to Cart
+    </button>
 
-            </button>
+</div>
 
-        </div>
 
 
+<!-- ================= PRODUCT 9 ================= -->
 
-        <!-- PRODUCT 11 -->
+<div class="product">
 
-        <div class="product">
+    <img
+        src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80"
+        alt="Flex Runner">
 
-            <img
-                src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80"
-                alt="Blue sneakers">
+    <h3>Flex Runner</h3>
 
-            <h3>Blue Sport</h3>
+    <span class="product-category">Running Shoes</span>
 
-            <p>
-                Sporty blue sneakers.
-            </p>
+    <p>Flexible running footwear for comfortable movement.</p>
 
-            <h4>₹2,399</h4>
+    <h4>₹2,399</h4>
 
+    <button
+        onclick="addToCart('Flex Runner',2399,'https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80')">
 
-            <button
-                onclick="addToCart('Blue Sport', 2399)">
+        🛒 Add to Cart
 
-                🛒 Add to Cart
+    </button>
 
-            </button>
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Flex Runner',2399)">
 
-        </div>
+        🛍️ Shop Now
 
+    </button>
 
+</div>
 
-        <!-- PRODUCT 12 -->
 
-        <div class="product">
 
-            <img
-                src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=600&q=80"
-                alt="Colorful sneakers">
+<!-- ================= PRODUCT 10 ================= -->
 
-            <h3>Color Pop</h3>
+<div class="product">
 
-            <p>
-                Bright and colorful sneakers.
-            </p>
+    <img
+        src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=600&q=80"
+        alt="Air Runner">
 
-            <h4>₹2,499</h4>
+    <h3>Air Runner</h3>
 
+    <span class="product-category">Running Shoes</span>
 
-            <button
-                onclick="addToCart('Color Pop', 2499)">
+    <p>Soft cushioned shoes designed for running.</p>
 
-                🛒 Add to Cart
+    <h4>₹2,999</h4>
 
-            </button>
+    <button
+        onclick="addToCart('Air Runner',2999,'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=600&q=80')">
 
-        </div>
+        🛒 Add to Cart
 
+    </button>
 
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Air Runner',2999)">
 
-    </main>
+        🛍️ Shop Now
 
+    </button>
 
-    <!-- ================= JAVASCRIPT ================= -->
+</div>
 
-    <script src="script.js"></script>
+
+
+<!-- ================= PRODUCT 11 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80"
+        alt="Blue Sport">
+
+    <h3>Blue Sport</h3>
+
+    <span class="product-category">Sports Shoes</span>
+
+    <p>Sporty footwear designed for active days.</p>
+
+    <h4>₹2,399</h4>
+
+    <button
+        onclick="addToCart('Blue Sport',2399,'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80')">
+
+        🛒 Add to Cart
+
+    </button>
+
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Blue Sport',2399)">
+
+        🛍️ Shop Now
+
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 12 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=600&q=80"
+        alt="Color Pop">
+
+    <h3>Color Pop</h3>
+
+    <span class="product-category">Fashion Shoes</span>
+
+    <p>Bright and stylish shoes for casual occasions.</p>
+
+    <h4>₹2,499</h4>
+
+    <button
+        onclick="addToCart('Color Pop',2499,'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=600&q=80')">
+
+        🛒 Add to Cart
+
+    </button>
+
+    <button
+        class="shop-now-button"
+        onclick="shopNow('Color Pop',2499)">
+
+        🛍️ Shop Now
+
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 13 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+        alt="Classic Formal">
+
+    <h3>Classic Formal</h3>
+
+    <span class="product-category">Formal Shoes</span>
+
+    <p>Elegant formal shoes for professional occasions.</p>
+
+    <h4>₹2,899</h4>
+
+    <button onclick="addToCart('Classic Formal',2899)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Classic Formal',2899)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 14 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=600&q=80"
+        alt="Executive Black">
+
+    <h3>Executive Black</h3>
+
+    <span class="product-category">Formal Shoes</span>
+
+    <p>Premium black footwear for formal occasions.</p>
+
+    <h4>₹3,299</h4>
+
+    <button onclick="addToCart('Executive Black',3299)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Executive Black',3299)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 15 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1582897085656-c636d006a246?auto=format&fit=crop&w=600&q=80"
+        alt="Brown Classic">
+
+    <h3>Brown Classic</h3>
+
+    <span class="product-category">Formal Shoes</span>
+
+    <p>Classic brown footwear with a sophisticated design.</p>
+
+    <h4>₹3,099</h4>
+
+    <button onclick="addToCart('Brown Classic',3099)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Brown Classic',3099)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 16 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80"
+        alt="Leather Loafer">
+
+    <h3>Leather Loafer</h3>
+
+    <span class="product-category">Loafers</span>
+
+    <p>Comfortable leather-style loafers for smart outfits.</p>
+
+    <h4>₹2,799</h4>
+
+    <button onclick="addToCart('Leather Loafer',2799)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Leather Loafer',2799)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 17 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1610398752800-146f269dfcc8?auto=format&fit=crop&w=600&q=80"
+        alt="Classic Loafer">
+
+    <h3>Classic Loafer</h3>
+
+    <span class="product-category">Loafers</span>
+
+    <p>Simple loafers suitable for casual and formal wear.</p>
+
+    <h4>₹2,499</h4>
+
+    <button onclick="addToCart('Classic Loafer',2499)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Classic Loafer',2499)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 18 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80"
+        alt="Chelsea Boot">
+
+    <h3>Chelsea Boot</h3>
+
+    <span class="product-category">Boots</span>
+
+    <p>Smart ankle boots with a classic Chelsea design.</p>
+
+    <h4>₹3,499</h4>
+
+    <button onclick="addToCart('Chelsea Boot',3499)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Chelsea Boot',3499)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 19 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=600&q=80"
+        alt="Leather Boot">
+
+    <h3>Leather Boot</h3>
+
+    <span class="product-category">Boots</span>
+
+    <p>Strong and stylish boots for outdoor wear.</p>
+
+    <h4>₹3,999</h4>
+
+    <button onclick="addToCart('Leather Boot',3999)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Leather Boot',3999)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 20 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&w=600&q=80"
+        alt="Hiking Boot">
+
+    <h3>Trail Hiking Boot</h3>
+
+    <span class="product-category">Hiking Boots</span>
+
+    <p>Durable footwear designed for outdoor adventures.</p>
+
+    <h4>₹4,299</h4>
+
+    <button onclick="addToCart('Trail Hiking Boot',4299)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Trail Hiking Boot',4299)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 21 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=600&q=80"
+        alt="Sport Sandal">
+
+    <h3>Sport Sandal</h3>
+
+    <span class="product-category">Sandals</span>
+
+    <p>Comfortable sandals for outdoor activities.</p>
+
+    <h4>₹1,299</h4>
+
+    <button onclick="addToCart('Sport Sandal',1299)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Sport Sandal',1299)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 22 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1603487742764-8f7d8a4a8c7c?auto=format&fit=crop&w=600&q=80"
+        alt="Comfort Sandal">
+
+    <h3>Comfort Sandal</h3>
+
+    <span class="product-category">Sandals</span>
+
+    <p>Soft and comfortable sandals for daily use.</p>
+
+    <h4>₹999</h4>
+
+    <button onclick="addToCart('Comfort Sandal',999)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Comfort Sandal',999)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 23 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=600&q=80"
+        alt="Classic Sliders">
+
+    <h3>Classic Sliders</h3>
+
+    <span class="product-category">Slides</span>
+
+    <p>Easy-to-wear sliders for everyday comfort.</p>
+
+    <h4>₹799</h4>
+
+    <button onclick="addToCart('Classic Sliders',799)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Classic Sliders',799)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 24 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=600&q=80"
+        alt="Beach Slides">
+
+    <h3>Beach Slides</h3>
+
+    <span class="product-category">Slides</span>
+
+    <p>Lightweight slides perfect for casual outings.</p>
+
+    <h4>₹699</h4>
+
+    <button onclick="addToCart('Beach Slides',699)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Beach Slides',699)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 25 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=600&q=80"
+        alt="Training Shoe">
+
+    <h3>Power Trainer</h3>
+
+    <span class="product-category">Training Shoes</span>
+
+    <p>Stable training shoes for gym and workouts.</p>
+
+    <h4>₹2,699</h4>
+
+    <button onclick="addToCart('Power Trainer',2699)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Power Trainer',2699)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 26 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=600&q=80"
+        alt="Gym Trainer">
+
+    <h3>Gym Trainer</h3>
+
+    <span class="product-category">Training Shoes</span>
+
+    <p>Comfortable trainers for everyday fitness.</p>
+
+    <h4>₹2,499</h4>
+
+    <button onclick="addToCart('Gym Trainer',2499)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Gym Trainer',2499)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 27 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=600&q=80"
+        alt="Court Shoes">
+
+    <h3>Court Pro</h3>
+
+    <span class="product-category">Court Shoes</span>
+
+    <p>Supportive shoes for court sports.</p>
+
+    <h4>₹2,899</h4>
+
+    <button onclick="addToCart('Court Pro',2899)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Court Pro',2899)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 28 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=600&q=80"
+        alt="Tennis Shoe">
+
+    <h3>Tennis Ace</h3>
+
+    <span class="product-category">Tennis Shoes</span>
+
+    <p>Lightweight footwear designed for tennis.</p>
+
+    <h4>₹2,799</h4>
+
+    <button onclick="addToCart('Tennis Ace',2799)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Tennis Ace',2799)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 29 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?auto=format&fit=crop&w=600&q=80"
+        alt="Walking Shoe">
+
+    <h3>Easy Walker</h3>
+
+    <span class="product-category">Walking Shoes</span>
+
+    <p>Comfort-focused shoes for long walks.</p>
+
+    <h4>₹1,899</h4>
+
+    <button onclick="addToCart('Easy Walker',1899)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Easy Walker',1899)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 30 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=600&q=80"
+        alt="Walking Comfort">
+
+    <h3>Walking Comfort</h3>
+
+    <span class="product-category">Walking Shoes</span>
+
+    <p>Everyday walking footwear with soft cushioning.</p>
+
+    <h4>₹1,999</h4>
+
+    <button onclick="addToCart('Walking Comfort',1999)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Walking Comfort',1999)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 31 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1520256862855-398228c41684?auto=format&fit=crop&w=600&q=80"
+        alt="Casual Sneaker">
+
+    <h3>Everyday Classic</h3>
+
+    <span class="product-category">Casual Sneakers</span>
+
+    <p>Simple casual sneakers for everyday outfits.</p>
+
+    <h4>₹1,899</h4>
+
+    <button onclick="addToCart('Everyday Classic',1899)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Everyday Classic',1899)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 32 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1554130842-8a9e7c8a3f17?auto=format&fit=crop&w=600&q=80"
+        alt="Canvas Sneaker">
+
+    <h3>Canvas Classic</h3>
+
+    <span class="product-category">Canvas Shoes</span>
+
+    <p>Lightweight canvas shoes with a timeless style.</p>
+
+    <h4>₹1,499</h4>
+
+    <button onclick="addToCart('Canvas Classic',1499)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Canvas Classic',1499)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 33 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80"
+        alt="Marathon Shoe">
+
+    <h3>Marathon Pro</h3>
+
+    <span class="product-category">Running Shoes</span>
+
+    <p>Lightweight footwear for long-distance running.</p>
+
+    <h4>₹3,299</h4>
+
+    <button onclick="addToCart('Marathon Pro',3299)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Marathon Pro',3299)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 34 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        alt="Trail Runner">
+
+    <h3>Trail Runner</h3>
+
+    <span class="product-category">Trail Shoes</span>
+
+    <p>Outdoor running footwear built for rough trails.</p>
+
+    <h4>₹3,199</h4>
+
+    <button onclick="addToCart('Trail Runner',3199)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Trail Runner',3199)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 35 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1554130842-8a9e7c8a3f17?auto=format&fit=crop&w=600&q=80"
+        alt="Retro Sneaker">
+
+    <h3>Retro Runner</h3>
+
+    <span class="product-category">Retro Sneakers</span>
+
+    <p>Classic-inspired sneakers with a modern feel.</p>
+
+    <h4>₹2,399</h4>
+
+    <button onclick="addToCart('Retro Runner',2399)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Retro Runner',2399)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 36 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80"
+        alt="Lightweight Runner">
+
+    <h3>Lightweight Runner</h3>
+
+    <span class="product-category">Running Shoes</span>
+
+    <p>Lightweight running shoes for everyday exercise.</p>
+
+    <h4>₹2,299</h4>
+
+    <button onclick="addToCart('Lightweight Runner',2299)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Lightweight Runner',2299)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 37 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80"
+        alt="Minimal Sneaker">
+
+    <h3>Minimal White</h3>
+
+    <span class="product-category">Minimal Sneakers</span>
+
+    <p>Minimal sneakers for clean everyday styling.</p>
+
+    <h4>₹2,199</h4>
+
+    <button onclick="addToCart('Minimal White',2199)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Minimal White',2199)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 38 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80"
+        alt="Street Classic">
+
+    <h3>Street Classic</h3>
+
+    <span class="product-category">Street Sneakers</span>
+
+    <p>Casual streetwear sneakers with a modern shape.</p>
+
+    <h4>₹2,599</h4>
+
+    <button onclick="addToCart('Street Classic',2599)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Street Classic',2599)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 39 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80"
+        alt="Performance Sport">
+
+    <h3>Performance Sport</h3>
+
+    <span class="product-category">Sports Shoes</span>
+
+    <p>Performance footwear for active training sessions.</p>
+
+    <h4>₹2,999</h4>
+
+    <button onclick="addToCart('Performance Sport',2999)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Performance Sport',2999)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 40 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        alt="Red Sprint">
+
+    <h3>Red Sprint</h3>
+
+    <span class="product-category">Sports Shoes</span>
+
+    <p>Sporty footwear designed for fast movement.</p>
+
+    <h4>₹2,699</h4>
+
+    <button onclick="addToCart('Red Sprint',2699)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Red Sprint',2699)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 41 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+        alt="Urban White">
+
+    <h3>Urban White</h3>
+
+    <span class="product-category">Sneakers</span>
+
+    <p>Clean white sneakers for modern street style.</p>
+
+    <h4>₹2,399</h4>
+
+    <button onclick="addToCart('Urban White',2399)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Urban White',2399)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 42 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=600&q=80"
+        alt="Fashion Runner">
+
+    <h3>Fashion Runner</h3>
+
+    <span class="product-category">Fashion Sneakers</span>
+
+    <p>Stylish footwear combining fashion and comfort.</p>
+
+    <h4>₹2,899</h4>
+
+    <button onclick="addToCart('Fashion Runner',2899)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Fashion Runner',2899)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 43 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+        alt="Casual Walker">
+
+    <h3>Casual Walker</h3>
+
+    <span class="product-category">Casual Shoes</span>
+
+    <p>Easy-going footwear for daily activities.</p>
+
+    <h4>₹1,699</h4>
+
+    <button onclick="addToCart('Casual Walker',1699)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Casual Walker',1699)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 44 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=600&q=80"
+        alt="Color Runner">
+
+    <h3>Color Runner</h3>
+
+    <span class="product-category">Running Shoes</span>
+
+    <p>Colorful running shoes for energetic workouts.</p>
+
+    <h4>₹2,799</h4>
+
+    <button onclick="addToCart('Color Runner',2799)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Color Runner',2799)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 45 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=600&q=80"
+        alt="Cloud Runner">
+
+    <h3>Cloud Runner</h3>
+
+    <span class="product-category">Running Shoes</span>
+
+    <p>Soft and cushioned shoes for comfortable running.</p>
+
+    <h4>₹3,099</h4>
+
+    <button onclick="addToCart('Cloud Runner',3099)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Cloud Runner',3099)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 46 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80"
+        alt="Black Street">
+
+    <h3>Black Street</h3>
+
+    <span class="product-category">Street Sneakers</span>
+
+    <p>Bold black sneakers for urban fashion.</p>
+
+    <h4>₹2,699</h4>
+
+    <button onclick="addToCart('Black Street',2699)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Black Street',2699)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 47 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=600&q=80"
+        alt="Active Trainer">
+
+    <h3>Active Trainer</h3>
+
+    <span class="product-category">Training Shoes</span>
+
+    <p>Supportive trainers for active everyday use.</p>
+
+    <h4>₹2,599</h4>
+
+    <button onclick="addToCart('Active Trainer',2599)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Active Trainer',2599)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 48 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80"
+        alt="Urban Chelsea">
+
+    <h3>Urban Chelsea</h3>
+
+    <span class="product-category">Chelsea Boots</span>
+
+    <p>Stylish ankle boots for smart casual outfits.</p>
+
+    <h4>₹3,799</h4>
+
+    <button onclick="addToCart('Urban Chelsea',3799)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Urban Chelsea',3799)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 49 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=600&q=80"
+        alt="Adventure Boot">
+
+    <h3>Adventure Boot</h3>
+
+    <span class="product-category">Outdoor Boots</span>
+
+    <p>Durable boots for outdoor adventures.</p>
+
+    <h4>₹4,199</h4>
+
+    <button onclick="addToCart('Adventure Boot',4199)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Adventure Boot',4199)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 50 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=600&q=80"
+        alt="Comfort Slides">
+
+    <h3>Comfort Slides</h3>
+
+    <span class="product-category">Slides</span>
+
+    <p>Simple and comfortable slides for daily use.</p>
+
+    <h4>₹899</h4>
+
+    <button onclick="addToCart('Comfort Slides',899)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Comfort Slides',899)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 51 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=600&q=80"
+        alt="Summer Sandal">
+
+    <h3>Summer Sandal</h3>
+
+    <span class="product-category">Sandals</span>
+
+    <p>Light and comfortable sandals for summer days.</p>
+
+    <h4>₹1,099</h4>
+
+    <button onclick="addToCart('Summer Sandal',1099)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Summer Sandal',1099)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 52 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1610398752800-146f269dfcc8?auto=format&fit=crop&w=600&q=80"
+        alt="Smart Loafer">
+
+    <h3>Smart Loafer</h3>
+
+    <span class="product-category">Loafers</span>
+
+    <p>Smart casual loafers for everyday styling.</p>
+
+    <h4>₹2,599</h4>
+
+    <button onclick="addToCart('Smart Loafer',2599)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Smart Loafer',2599)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 53 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1582897085656-c636d006a246?auto=format&fit=crop&w=600&q=80"
+        alt="Business Brown">
+
+    <h3>Business Brown</h3>
+
+    <span class="product-category">Formal Shoes</span>
+
+    <p>Professional brown shoes for office wear.</p>
+
+    <h4>₹3,199</h4>
+
+    <button onclick="addToCart('Business Brown',3199)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Business Brown',3199)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 54 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+        alt="Office Classic">
+
+    <h3>Office Classic</h3>
+
+    <span class="product-category">Formal Shoes</span>
+
+    <p>Classic office footwear with a polished look.</p>
+
+    <h4>₹2,999</h4>
+
+    <button onclick="addToCart('Office Classic',2999)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Office Classic',2999)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 55 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=600&q=80"
+        alt="Fitness Runner">
+
+    <h3>Fitness Runner</h3>
+
+    <span class="product-category">Fitness Shoes</span>
+
+    <p>Comfortable shoes for fitness and exercise.</p>
+
+    <h4>₹2,399</h4>
+
+    <button onclick="addToCart('Fitness Runner',2399)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Fitness Runner',2399)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 56 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=600&q=80"
+        alt="Training Flex">
+
+    <h3>Training Flex</h3>
+
+    <span class="product-category">Training Shoes</span>
+
+    <p>Flexible footwear for gym and training sessions.</p>
+
+    <h4>₹2,799</h4>
+
+    <button onclick="addToCart('Training Flex',2799)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Training Flex',2799)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 57 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80"
+        alt="Premium Loafer">
+
+    <h3>Premium Loafer</h3>
+
+    <span class="product-category">Premium Loafers</span>
+
+    <p>Elegant loafers for special occasions.</p>
+
+    <h4>₹3,299</h4>
+
+    <button onclick="addToCart('Premium Loafer',3299)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Premium Loafer',3299)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 58 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=600&q=80"
+        alt="Outdoor Sandal">
+
+    <h3>Outdoor Sandal</h3>
+
+    <span class="product-category">Outdoor Sandals</span>
+
+    <p>Durable sandals for outdoor activities.</p>
+
+    <h4>₹1,399</h4>
+
+    <button onclick="addToCart('Outdoor Sandal',1399)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Outdoor Sandal',1399)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 59 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=600&q=80"
+        alt="Court Runner">
+
+    <h3>Court Runner</h3>
+
+    <span class="product-category">Court Shoes</span>
+
+    <p>Responsive shoes designed for court movement.</p>
+
+    <h4>₹2,999</h4>
+
+    <button onclick="addToCart('Court Runner',2999)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Court Runner',2999)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCT 60 ================= -->
+
+<div class="product">
+
+    <img
+        src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=600&q=80"
+        alt="Champion Sport">
+
+    <h3>Champion Sport</h3>
+
+    <span class="product-category">Sports Shoes</span>
+
+    <p>High-performance sports footwear for active lifestyles.</p>
+
+    <h4>₹3,099</h4>
+
+    <button onclick="addToCart('Champion Sport',3099)">
+        🛒 Add to Cart
+    </button>
+
+    <button class="shop-now-button"
+            onclick="shopNow('Champion Sport',3099)">
+        🛍️ Shop Now
+    </button>
+
+</div>
+
+
+</main>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="script.js"></script>
 
 
 </body>
