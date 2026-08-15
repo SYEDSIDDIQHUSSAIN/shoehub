@@ -1,5 +1,5 @@
 // ==========================================
-// SHOEHUB - SHOPPING CART SYSTEM
+// SHOEHUB - COMPLETE SHOPPING SYSTEM
 // ==========================================
 
 
@@ -9,30 +9,23 @@
 
 function addToCart(productName, productPrice, productImage) {
 
-    // Get existing cart
     let cart =
         JSON.parse(localStorage.getItem("cart")) || [];
 
-
-    // Check if product already exists
     let existingProduct = cart.find(
         product => product.name === productName
     );
 
-
     if (existingProduct) {
 
-        // Increase quantity
         existingProduct.quantity++;
 
-        // If image was not saved before, save it now
         if (!existingProduct.image && productImage) {
             existingProduct.image = productImage;
         }
 
     } else {
 
-        // Add new product
         cart.push({
 
             name: productName,
@@ -47,15 +40,11 @@ function addToCart(productName, productPrice, productImage) {
 
     }
 
-
-    // Save cart
     localStorage.setItem(
         "cart",
         JSON.stringify(cart)
     );
 
-
-    // Confirmation
     alert(
         productName +
         " has been added to your cart! 🛒"
@@ -64,6 +53,67 @@ function addToCart(productName, productPrice, productImage) {
 }
 
 
+// ==========================================
+// SHOP NOW - DIRECT WHATSAPP ORDER
+// ==========================================
+
+function shopNow(productName, productPrice) {
+
+    // Your WhatsApp number
+    let whatsappNumber = "918123883335";
+
+    // Create order message
+    let message =
+        "Hello ShoeHub! 👟\n\n" +
+
+        "🛍️ NEW ORDER\n" +
+        "━━━━━━━━━━━━━━━━━━\n\n" +
+
+        "👟 Product: " +
+        productName + "\n\n" +
+
+        "💰 Price: ₹" +
+        Number(productPrice).toLocaleString("en-IN") +
+        "\n\n" +
+
+        "📦 Quantity: 1\n\n" +
+
+        "━━━━━━━━━━━━━━━━━━\n" +
+
+        "I would like to order this product.\n\n" +
+
+        "Thank you! 😊";
+
+    // Encode message
+    let encodedMessage =
+        encodeURIComponent(message);
+
+    // WhatsApp URL
+    let whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodedMessage;
+
+    // Open WhatsApp
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+    // Customer confirmation
+    setTimeout(function () {
+
+        alert(
+            "Order request created successfully! ✅\n\n" +
+            "WhatsApp will open with your order details.\n\n" +
+            "Please send the message to confirm your order."
+        );
+
+    }, 500);
+
+}
+
 
 // ==========================================
 // DISPLAY CART
@@ -71,12 +121,9 @@ function addToCart(productName, productPrice, productImage) {
 
 function displayCart() {
 
-    // Get cart
     let cart =
         JSON.parse(localStorage.getItem("cart")) || [];
 
-
-    // Find cart elements
     let cartItems =
         document.getElementById("cart-items");
 
@@ -87,7 +134,6 @@ function displayCart() {
         document.getElementById("cart-count");
 
 
-    // If this is not the cart page
     if (!cartItems) {
         return;
     }
@@ -136,6 +182,7 @@ function displayCart() {
 
 
     // Clear previous items
+
     cartItems.innerHTML = "";
 
 
@@ -145,7 +192,7 @@ function displayCart() {
 
 
     // ==========================================
-    // DISPLAY PRODUCTS
+    // DISPLAY CART PRODUCTS
     // ==========================================
 
     cart.forEach(function(product, index) {
@@ -169,7 +216,6 @@ function displayCart() {
             "cart-product";
 
 
-        // Use a placeholder if image is missing
         let imageSource =
             product.image ||
             "https://via.placeholder.com/300x300?text=ShoeHub";
@@ -189,7 +235,7 @@ function displayCart() {
                 </h3>
 
                 <p>
-                    Price: ₹${product.price}
+                    Price: ₹${Number(product.price).toLocaleString("en-IN")}
                 </p>
 
 
@@ -223,7 +269,7 @@ function displayCart() {
             <div class="cart-product-right">
 
                 <h3>
-                    ₹${productTotal}
+                    ₹${productTotal.toLocaleString("en-IN")}
                 </h3>
 
 
@@ -271,7 +317,6 @@ function displayCart() {
 }
 
 
-
 // ==========================================
 // INCREASE QUANTITY
 // ==========================================
@@ -282,7 +327,6 @@ function increaseQuantity(index) {
         JSON.parse(localStorage.getItem("cart")) || [];
 
 
-    // Make sure product exists
     if (!cart[index]) {
         return;
     }
@@ -291,18 +335,15 @@ function increaseQuantity(index) {
     cart[index].quantity++;
 
 
-    // Save cart
     localStorage.setItem(
         "cart",
         JSON.stringify(cart)
     );
 
 
-    // Refresh cart
     displayCart();
 
 }
-
 
 
 // ==========================================
@@ -315,7 +356,6 @@ function decreaseQuantity(index) {
         JSON.parse(localStorage.getItem("cart")) || [];
 
 
-    // Make sure product exists
     if (!cart[index]) {
         return;
     }
@@ -327,24 +367,20 @@ function decreaseQuantity(index) {
 
     } else {
 
-        // Remove product when quantity reaches zero
         cart.splice(index, 1);
 
     }
 
 
-    // Save cart
     localStorage.setItem(
         "cart",
         JSON.stringify(cart)
     );
 
 
-    // Refresh cart
     displayCart();
 
 }
-
 
 
 // ==========================================
@@ -357,7 +393,6 @@ function removeFromCart(index) {
         JSON.parse(localStorage.getItem("cart")) || [];
 
 
-    // Make sure product exists
     if (!cart[index]) {
         return;
     }
@@ -367,18 +402,15 @@ function removeFromCart(index) {
         cart[index].name;
 
 
-    // Remove product
     cart.splice(index, 1);
 
 
-    // Save cart
     localStorage.setItem(
         "cart",
         JSON.stringify(cart)
     );
 
 
-    // Refresh cart
     displayCart();
 
 
@@ -388,7 +420,6 @@ function removeFromCart(index) {
     );
 
 }
-
 
 
 // ==========================================
@@ -401,17 +432,17 @@ function clearCart() {
         JSON.parse(localStorage.getItem("cart")) || [];
 
 
-    // Don't do anything if already empty
     if (cart.length === 0) {
 
-        alert("Your cart is already empty! 🛒");
+        alert(
+            "Your cart is already empty! 🛒"
+        );
 
         return;
 
     }
 
 
-    // Confirm before clearing
     let confirmClear =
         confirm(
             "Are you sure you want to clear your cart?"
@@ -423,11 +454,9 @@ function clearCart() {
     }
 
 
-    // Clear cart
     localStorage.removeItem("cart");
 
 
-    // Refresh cart
     displayCart();
 
 
@@ -438,21 +467,15 @@ function clearCart() {
 }
 
 
-
 // ==========================================
-// WHATSAPP CHECKOUT
+// CHECKOUT - SEND ENTIRE CART TO WHATSAPP
 // ==========================================
 
 function checkout() {
 
-    // Get cart
     let cart =
         JSON.parse(localStorage.getItem("cart")) || [];
 
-
-    // ==========================================
-    // CHECK EMPTY CART
-    // ==========================================
 
     if (cart.length === 0) {
 
@@ -466,20 +489,10 @@ function checkout() {
     }
 
 
-    // ==========================================
-    // YOUR WHATSAPP NUMBER
-    // ==========================================
-
-    // India country code = 91
-    // Your number = 8123883335
-
+    // Your WhatsApp number
     let whatsappNumber =
         "918123883335";
 
-
-    // ==========================================
-    // CALCULATE ORDER
-    // ==========================================
 
     let total = 0;
 
@@ -493,14 +506,15 @@ function checkout() {
     let message =
         "Hello ShoeHub! 👟\n\n" +
 
-        "I would like to place an order.\n\n" +
+        "🛍️ I WOULD LIKE TO PLACE AN ORDER\n\n" +
 
-        "🛍️ ORDER DETAILS\n" +
+        "━━━━━━━━━━━━━━━━━━\n" +
+
+        "📦 ORDER DETAILS\n" +
 
         "━━━━━━━━━━━━━━━━━━\n";
 
 
-    // Add every product
     cart.forEach(function(product, index) {
 
         let productTotal =
@@ -530,12 +544,12 @@ function checkout() {
             "\n" +
 
             "   Price: ₹" +
-            product.price +
+            Number(product.price).toLocaleString("en-IN") +
 
             "\n" +
 
             "   Subtotal: ₹" +
-            productTotal +
+            productTotal.toLocaleString("en-IN") +
 
             "\n";
 
@@ -569,17 +583,13 @@ function checkout() {
         "Thank you! 😊";
 
 
-    // ==========================================
-    // ENCODE MESSAGE
-    // ==========================================
+    // Encode message
 
     let encodedMessage =
         encodeURIComponent(message);
 
 
-    // ==========================================
-    // CREATE WHATSAPP LINK
-    // ==========================================
+    // WhatsApp URL
 
     let whatsappURL =
         "https://wa.me/" +
@@ -588,17 +598,27 @@ function checkout() {
         encodedMessage;
 
 
-    // ==========================================
-    // OPEN WHATSAPP
-    // ==========================================
+    // Open WhatsApp
 
     window.open(
         whatsappURL,
         "_blank"
     );
 
-}
 
+    // Customer message
+
+    setTimeout(function () {
+
+        alert(
+            "Your order details are ready! ✅\n\n" +
+            "WhatsApp has been opened.\n" +
+            "Please send the message to ShoeHub to confirm your order."
+        );
+
+    }, 500);
+
+}
 
 
 // ==========================================
